@@ -22,17 +22,17 @@ function NavBarList() {
                     <Navbar.Collapse id='responsive-navbar'>
                         <Nav className='me-auto'>
                             <NavDropdown id='nav-man-dropdown' title='Man' className='m-2'>
-                                <NavDropdown.Item href="">上衣</NavDropdown.Item>
+                                <NavDropdown.Item href="">上身</NavDropdown.Item>
                                 <NavDropdown.Item href="">下身</NavDropdown.Item>
                             </NavDropdown>
             
                             <NavDropdown id='nav-man-dropdown' title='Women' className='m-2'>
-                                <NavDropdown.Item href="">上衣</NavDropdown.Item>
+                                <NavDropdown.Item href="">上身</NavDropdown.Item>
                                 <NavDropdown.Item href="">下身</NavDropdown.Item>
                             </NavDropdown>
 
                             <NavDropdown id='nav-man-dropdown' title='Baby' className='m-2'>
-                                <NavDropdown.Item href="">上衣</NavDropdown.Item>
+                                <NavDropdown.Item href="">上身</NavDropdown.Item>
                                 <NavDropdown.Item href="">下身</NavDropdown.Item>
                             </NavDropdown>
                         </Nav>
