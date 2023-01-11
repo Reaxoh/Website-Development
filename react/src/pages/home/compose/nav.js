@@ -4,12 +4,20 @@ import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css'
 
+import { HandbagFill, PersonCircle } from "react-bootstrap-icons";
+import { HeartFill } from "react-bootstrap-icons";
+import { CartFill } from "react-bootstrap-icons";
+import { PersonFill } from "react-bootstrap-icons"
+
+
 function NavBarList() {
     return (
         <div>
             <Navbar collapseOnSelect fixed="top" expand="lg" bg="light" variant="light">
                 <Container>
-                    <Navbar.Brand>Close</Navbar.Brand>
+                    <Navbar.Brand>
+                        <HandbagFill  className='pb-2' size={30}/> Clothes
+                    </Navbar.Brand>
                     <Navbar.Toggle aria-controls='responsive-navbar' />
                     <Navbar.Collapse id='responsive-navbar'>
                         <Nav className='me-auto'>
@@ -29,10 +37,16 @@ function NavBarList() {
                             </NavDropdown>
                         </Nav>
                         
-                        <Nav>
-                            <Nav.Link href="">我的最愛</Nav.Link>
-                            <Nav.Link href="">購物車</Nav.Link>
-                            <Nav.Link href="">登入</Nav.Link>
+                        <Nav> 
+                            <Nav.Link href="" className='m-2'>
+                                <HeartFill size={30} className='mb-2'/>
+                            </Nav.Link>
+                            <Nav.Link href="" className='m-2'>
+                                <CartFill size={30} className='mb-2'/>
+                            </Nav.Link>
+                            <Nav.Link href="" className='m-2'>
+                                <PersonFill size={30} className='mb-2'/>
+                            </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
