@@ -3,6 +3,7 @@ import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css'
+import Login from '../../login/auth';
 
 import { HandbagFill, PersonCircle } from "react-bootstrap-icons";
 import { HeartFill } from "react-bootstrap-icons";
@@ -13,7 +14,7 @@ import { PersonFill } from "react-bootstrap-icons"
 function NavBarList() {
     return (
         <div>
-            <Navbar collapseOnSelect fixed="top" expand="lg" bg="light" variant="light">
+            <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand>
                         <HandbagFill  className='pb-2' size={30}/> Clothes
@@ -37,14 +38,14 @@ function NavBarList() {
                             </NavDropdown>
                         </Nav>
                         
-                        <Nav> 
-                            <Nav.Link href="" className='m-2'>
+                        <Nav  activeKey="./pages/login/Login"> 
+                            <Nav.Link href='' className='m-2'>
                                 <HeartFill size={30} className='mb-2'/>
                             </Nav.Link>
-                            <Nav.Link href="" className='m-2'>
+                            <Nav.Link href='' className='m-2'>
                                 <CartFill size={30} className='mb-2'/>
                             </Nav.Link>
-                            <Nav.Link href="" className='m-2'>
+                            <Nav.Link href='../../login/Login.js' className='m-2'>
                                 <PersonFill size={30} className='mb-2'/>
                             </Nav.Link>
                         </Nav>
