@@ -1,0 +1,5 @@
+{
+  "dependencies": {
+    "node-mysql-admin": "^0.1.8"
+  }
+}

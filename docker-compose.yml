@@ -38,9 +38,25 @@ services:
       - MYSQL_DATABASE=mydatabase
       - MYSQL_USER=reax
       - MYSQL_PASSWORD=46197115
-    ports:
-      - "3306:3306"
+    # ports:
+    #   - "3306:3306"
     volumes:
       - ./mariadb:/var/lib/mysql
+  
+  php:
+    image: php:fpm-alpine
+    links:
+      - nginx
+      
+  phpmyadmin:
+    image: phpmyadmin:latest
+    links:
+      - mariadb
+    environment:
+      PMA_HOST: mariadb
+      PMA_PORT: 3306
+      PMA_ARBITRARY: 1
+    ports:
+      - 8080:80
 
           

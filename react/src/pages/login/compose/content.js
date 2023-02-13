@@ -34,8 +34,9 @@ const LoginContent = () => {
     return (
         <Container>
             <Row className='fs-1 my-3'>
-                <Col className='text-center'>NOT Registration?</Col>
-                <span className="link-primary" onClick={changeAuthMode}>Sign Up</span>
+                <Col className='text-center'>NOT Registration?
+                    <span className="link-primary" onClick={changeAuthMode}>Sign Up</span>
+                </Col>
             </Row>
             <Row className="justify-content-md-center">
                 <Col md="8" className='px-4'><UserLogin /></Col>

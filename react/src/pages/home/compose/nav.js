@@ -1,15 +1,17 @@
+import React from 'react';
+
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
 import 'bootstrap/dist/css/bootstrap.min.css'
-import Login from '../../login/auth';
 
-import { HandbagFill, PersonCircle } from "react-bootstrap-icons";
+import { HandbagFill} from "react-bootstrap-icons";
 import { HeartFill } from "react-bootstrap-icons";
 import { CartFill } from "react-bootstrap-icons";
 import { PersonFill } from "react-bootstrap-icons"
 
+import { Link } from "react-router-dom";
 
 function NavBarList() {
     return (
@@ -17,7 +19,9 @@ function NavBarList() {
             <Navbar collapseOnSelect expand="lg" bg="light" variant="light">
                 <Container>
                     <Navbar.Brand>
-                        <HandbagFill  className='pb-2' size={30}/> Clothes
+                        <Link to="/">
+                            <HandbagFill  className='pb-2' size={30}/> Clothes
+                        </Link>
                     </Navbar.Brand>
                     <Navbar.Toggle aria-controls='responsive-navbar' />
                     <Navbar.Collapse id='responsive-navbar'>
@@ -38,15 +42,17 @@ function NavBarList() {
                             </NavDropdown>
                         </Nav>
                         
-                        <Nav  activeKey="./pages/login/Login"> 
+                        <Nav> 
                             <Nav.Link href='' className='m-2'>
                                 <HeartFill size={30} className='mb-2'/>
                             </Nav.Link>
                             <Nav.Link href='' className='m-2'>
                                 <CartFill size={30} className='mb-2'/>
                             </Nav.Link>
-                            <Nav.Link href='../../login/Login.js' className='m-2'>
-                                <PersonFill size={30} className='mb-2'/>
+                            <Nav.Link  href='' className='m-2'>
+                                <Link to="/auth">
+                                    <PersonFill size={30} className='mb-2'/>
+                                </Link>
                             </Nav.Link>
                         </Nav>
                     </Navbar.Collapse>

@@ -6,6 +6,10 @@ const fs    = require('fs');
 const port  = 80;
 const mysql = require('mysql2');
 
+
+var mysqlAdmin = require('node-mysql-admin');
+
+
 const connection = mysql.createConnection({
     host: 'mariadb',
     user: 'root',
@@ -38,5 +42,7 @@ connection.connect((err) => {
     }
     console.log("Connected to mariadb database");
 });
+
+app.use(mysqlAdmin(app));
 
 app.listen(port);
