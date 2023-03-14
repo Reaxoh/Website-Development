@@ -9,11 +9,11 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 
 const LoginContent = () => {
-    const [authMode, setAuthMode] = useState("signin")
+    const [authMode, setAuthMode] = useState("signin");
 
     const changeAuthMode = () => {
         setAuthMode(authMode === "signin" ? "signup" : "signin")
-    }
+    };
 
     if (authMode === "signin") {
         return (
